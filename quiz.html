@@ -1,0 +1,118 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politics and Democratic Discourses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Header -->
+  <header class="page-header">
+    <h1>REAL or FAKE?</h1>
+    
+  </header>
+ <!-- Question 1 -->
+ <div class="quiz-question">
+    <p><strong>Question 1:</strong> Is this video real or deepfake?<br><span id="score1" class="score">Score: 0/10</span></p>
+   <img src="image1.jpg" alt="">
+    
+    <button class="quiz-option" onclick="answerQuestion(1, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(1, 'fake')">Fake</button>
+  
+    
+  </div>
+  <!-- Question 2 -->
+  <div class="quiz-question">
+    <p><strong>Question 2:</strong> So you think this is a fake image?<br><span id="score2" class="score">Score: 0/10</span></p>
+   <img src="image1.jpg" alt="">
+   <button class="quiz-option" onclick="answerQuestion(2, 'yes')">Yes</button>
+    <button class="quiz-option" onclick="answerQuestion(2, 'no')">No</button>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="quiz-question">
+    <p><strong>Question 3:</strong> This is a Real iamge. True or False?<br><span id="score3" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+    <button class="quiz-option" onclick="answerQuestion(3, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(3, 'fake')">Fake</button>
+  </div>
+  <!-- Question 4 -->
+  <div class="quiz-question">
+    <p><strong>Question 4:</strong> Guess this image. Real or Fake?<br><span id="score4" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+   <button class="quiz-option" onclick="answerQuestion(4, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(4, 'fake')">Fake</button>
+    </div>
+   <!-- Question 5 -->
+  <div class="quiz-question">
+    <p><strong>Question 5:</strong> This is a Real video of the memeber of Parliament?<br><span id="score5" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+    <button class="quiz-option" onclick="answerQuestion(5, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(5, 'fake')">Fake</button>
+    </div>
+   <!-- Question 6 -->
+  <div class="quiz-question">
+    <p><strong>Question 6:</strong> Is this the influenecr we really know?<br><span id="score6" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+   <button class="quiz-option" onclick="answerQuestion(6, 'true')">True</button>
+    <button class="quiz-option" onclick="answerQuestion(6, 'false')">False</button>
+    </div>
+   <!-- Question 7 -->
+  <div class="quiz-question">
+    <p><strong>Question 7:</strong> Faeke or Real?<br><span id="score7" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+    <button class="quiz-option" onclick="answerQuestion(7, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(7, 'fake')">Fake</button>
+    </div>
+   <!-- Question 8 -->
+  <div class="quiz-question">
+    <p><strong>Question 8:</strong> is this really true?<br><span id="score8" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+   <button class="quiz-option" onclick="answerQuestion(8, 'true')">True</button>
+    <button class="quiz-option" onclick="answerQuestion(8, 'false')">False</button>
+    </div>
+   <!-- Question 9 -->
+  <div class="quiz-question">
+    <p><strong>Question 9:</strong> Guess this image. Real or Fake?<br><span id="score9" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+    <button class="quiz-option" onclick="answerQuestion(9, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(9, 'fake')">Fake</button>
+    </div>
+   <!-- Question 10 -->
+  <div class="quiz-question">
+    <p><strong>Question 10:</strong> Guess this video. Real or Fake?<br><span id="score10" class="score">Score: 0/10</span></p>
+    <img src="image1.jpg" alt="">
+    <button class="quiz-option" onclick="answerQuestion(10, 'real')">Real</button>
+    <button class="quiz-option" onclick="answerQuestion(10, 'fake')">Fake</button>
+    </div>
+</section>
+<!-- Conclusion Box (Hidden Initially) -->
+  <div class="conclusion-box" id="conclusionBox">
+    <p>Congratulations! You've completed the quiz!</p>
+    <button onclick="finishQuiz()">Finish</button>
+  </div>
+
+  <script>
+    let questionCount = 0; // Track the number of answered questions
+    const totalQuestions = 10; // Total number of questions
+
+    // Function to handle when a question is answered
+    function nextQuestion() {
+      questionCount++;
+      
+      // Once all questions are answered, show the conclusion box
+      if (questionCount === totalQuestions) {
+        document.getElementById('conclusionBox').style.display = 'block';
+      }
+    }
+
+    // Function for the "Finish" button click
+    function finishQuiz() {
+      alert('You have finished the quiz!');
+      // Optionally, you can redirect or close the page here
+    }
+  </script>
+
+</body>
